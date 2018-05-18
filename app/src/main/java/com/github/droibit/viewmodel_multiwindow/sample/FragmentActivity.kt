@@ -34,7 +34,7 @@ class FragmentActivity : AppCompatActivity() {
       super.onActivityCreated(savedInstanceState)
 
       val vm = ViewModelProviders.of(this).get(FragmentViewModel::class.java)
-      text.text = "${vm::class.java.simpleName}@${vm.hashCode().toString(16)}"
+      text.text = vm.toString()
     }
   }
 }

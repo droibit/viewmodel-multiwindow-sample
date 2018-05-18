@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
 
     val vm = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
-    text.text = "${vm::class.java.simpleName}@${vm.hashCode().toString(16)}"
+    text.text = vm.toString()
 
     button.setOnClickListener {
       startActivity(Intent(this@MainActivity, FragmentActivity::class.java))
